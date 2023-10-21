@@ -51,6 +51,7 @@ export default {
       },
       fontFamily: {
         sans: ['"Roboto Slab"', ...defaultTheme.fontFamily.sans],
+        heading: ['"Bookman"'],
       },
     },
   },

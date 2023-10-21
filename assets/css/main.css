@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap");
+@import url("https://cdn.peakville.it/static/website/fonts.css");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@latest/font/bootstrap-icons.css");
 
 @tailwind base;
@@ -7,8 +8,8 @@
 
 @layer base {
   ::selection {
-    background: #28A0A5;
-    color: #FFFDF0;
+    background: #28a0a5;
+    color: #fffdf0;
   }
 
   body {

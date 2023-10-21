@@ -29,10 +29,10 @@ useHead({
 })
 
 useSeoMeta({
-  title: "Peakville",
-  description: "70s vibes on FiveM",
-  ogTitle: "Peakville",
-  ogDescription: "70s vibes on FiveM",
+  title: "Peakville - '70s vibes on FiveM",
+  description: "Feel the '70s vibes on FiveM",
+  ogTitle: "Peakville - '70s vibes on FiveM",
+  ogDescription: "Feel the '70s vibes on FiveM",
   ogUrl: "https://www.peakville.it",
   ogSiteName: "Peakville",
 })
