@@ -1,6 +1,6 @@
 <template>
   <div class="w-screen h-screen flex items-center justify-center">
-    <img :src="logo" alt="Peakville" class="w-64 block" />
+    <img :src="logo" alt="Peakville" class="w-64 block" :draggable="false" />
   </div>
 </template>
 
