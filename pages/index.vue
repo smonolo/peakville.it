@@ -1,9 +1,7 @@
 <template>
   <div class="flex h-screen w-screen flex-col items-center justify-center">
     <img :src="logo" alt="Peakville" class="block w-60" :draggable="false" />
-    <div class="font-heading mt-8 text-2xl font-bold">
-      Feel the '70s vibes on FiveM
-    </div>
+    <div class="mt-8 text-2xl font-bold">Feel the '70s vibes on FiveM</div>
     <div class="mt-3 flex w-fit items-center gap-4">
       <a
         v-for="social in socials"
