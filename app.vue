@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
 useHead({
-  title: "Peakville",
+  title: "Peakville - '70s vibes on FiveM",
   meta: [
     {
       charset: "utf-8",
