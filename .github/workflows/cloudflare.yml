@@ -32,6 +32,6 @@ jobs:
           NITRO_PRESET: cloudflare
 
       - name: Publish
-        uses: cloudflare/wrangler-actions@2.0.0
+        uses: cloudflare/wrangler-action@2.0.0
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
