@@ -1,4 +1,4 @@
-name: Deploy
+name: Deploy to Deno
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
 
 jobs:
   deploy:
-    name: Deploy
+    name: Deploy to Deno
     runs-on: ubuntu-latest
 
     permissions:

@@ -1,0 +1,9 @@
+name = "website"
+main = "./.output/server/index.mjs"
+workers_dev = true
+compatibility_date = "2022-09-10"
+account_id = "6643ea57a64f53f5babbcb0ab691fcd1"
+route = "website.peakville.workers.dev"
+
+[site]
+bucket = ".output/public"

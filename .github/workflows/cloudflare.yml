@@ -1,0 +1,37 @@
+name: Deploy to Cloudflare Workers
+
+on:
+  workflow_dispatch:
+    branches: [main]
+
+jobs:
+  deploy:
+    name: Deploy to Cloudflare Workers
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Cache node_modules
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: ubuntu-latest-node-v18-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/package-lock.json')) }}
+
+      - name: Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm install
+
+      - name: Build
+        run: npm run build
+        env:
+          NITRO_PRESET: cloudflare
+
+      - name: Publish
+        uses: cloudflare/wrangler-actions@2.0.0
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
