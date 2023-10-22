@@ -34,7 +34,7 @@ const socials: Social[] = [
   {
     icon: "instagram",
     name: "Instagram",
-    url: "https://instagram.com/peakville1970",
+    url: "https://www.instagram.com/peakville1970/",
   },
 ]
 </script>
