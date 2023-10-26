@@ -5,14 +5,21 @@
     <div class="mt-3 flex w-fit items-center gap-4">
       <a
         v-for="social in socials"
-        :key="social.icon"
+        :key="social.key"
         :href="social.url"
         target="_blank"
         class="block text-p-black-100 no-underline transition-colors hover:text-p-cyan-500"
       >
-        <i class="bi text-2xl" :class="`bi-${social.icon}`" />
+        <i class="bi text-2xl" :class="`bi-${social.key}`" />
       </a>
     </div>
+    <a
+      :href="socials.find((s) => s.key === 'discord')?.url"
+      target="_blank"
+      class="mt-5 block w-fit"
+    >
+      <Button>Inizia a giocare</Button>
+    </a>
   </div>
 </template>
 
@@ -20,19 +27,19 @@
 import logo from "~/assets/img/logo.png"
 
 type Social = {
-  icon: string
+  key: string
   name: string
   url: string
 }
 
 const socials: Social[] = [
   {
-    icon: "discord",
+    key: "discord",
     name: "Discord",
     url: "https://discord.gg/peakville",
   },
   {
-    icon: "instagram",
+    key: "instagram",
     name: "Instagram",
     url: "https://www.instagram.com/peakville1970/",
   },
