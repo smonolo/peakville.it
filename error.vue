@@ -3,7 +3,7 @@
     <div class="font-heading text-2xl font-bold">Dove sei finito?</div>
     <div class="mt-2 text-lg">La pagina che stai cercando non esiste.</div>
     <NuxtLink to="/" class="mt-8 block w-fit">
-      <Button>Torna Indietro</Button>
+      <Button>Torna alla home</Button>
     </NuxtLink>
   </div>
 </template>
