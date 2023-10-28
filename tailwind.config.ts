@@ -1,6 +1,10 @@
 import type { Config } from "tailwindcss"
 import defaultTheme from "tailwindcss/defaultTheme"
 
+const extendedThemeBackgroundImage = {
+  "home-background": "url('~/assets/img/home-background.jpg')",
+}
+
 export const extendedThemeColors = {
   "p-beige": {
     100: "#FFFDF0",
@@ -39,6 +43,11 @@ export const extendedThemeColors = {
   },
 } as const
 
+const extendedThemeFontFamily = {
+  sans: ['"Roboto Slab"', ...defaultTheme.fontFamily.sans],
+  heading: ['"Bookman"'],
+}
+
 export default {
   content: [
     "./components/**/*.{js,vue,ts}",
@@ -50,11 +59,9 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: extendedThemeBackgroundImage,
       colors: extendedThemeColors,
-      fontFamily: {
-        sans: ['"Roboto Slab"', ...defaultTheme.fontFamily.sans],
-        heading: ['"Bookman"'],
-      },
+      fontFamily: extendedThemeFontFamily,
     },
   },
   plugins: [],
