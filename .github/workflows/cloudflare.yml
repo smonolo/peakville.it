@@ -10,8 +10,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-          os: [ubuntu-latest]
-          node: [18]
+        os: [ubuntu-latest]
+        node: [18]
 
     steps:
       - name: Install Node.js
