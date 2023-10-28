@@ -22,6 +22,7 @@
           :title="social.name"
           target="_blank"
           class="block text-p-beige-100 no-underline transition-colors hover:text-p-cyan-500"
+          @click="mixpanel.track('Home Social Click', { social: social.key })"
         >
           <i class="bi text-2xl" :class="`bi-${social.key}`" />
         </a>
@@ -33,6 +34,9 @@
           :href="linkButton.url"
           target="_blank"
           class="block w-fit"
+          @click="
+            mixpanel.track('Home Button Click', { button: linkButton.key })
+          "
         >
           <Button :variant="linkButton.variant">{{ linkButton.text }}</Button>
         </a>
@@ -44,6 +48,7 @@
 <script setup lang="ts">
 import logo from "~/assets/img/logo.png"
 import type { ThemeColors } from "~/types/theme"
+import mixpanel from "mixpanel-browser"
 
 type Social = {
   key: string
@@ -52,6 +57,7 @@ type Social = {
 }
 
 type LinkButton = {
+  key: string
   url: string
   text: string
   variant?: ThemeColors
@@ -79,10 +85,12 @@ const socials: Social[] = [
 
 const linkButtons: LinkButton[] = [
   {
+    key: "playButton",
     url: discordUrl,
     text: "Inizia a giocare",
   },
   {
+    key: "trailerButton",
     url: "https://www.youtube.com/watch?v=BG698njo8u0",
     text: "Guarda il trailer",
     variant: "p-orange",

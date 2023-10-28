@@ -3,6 +3,8 @@
 </template>
 
 <script setup lang="ts">
+import mixpanel from "mixpanel-browser"
+
 useHead({
   title: "Peakville - '70s vibes on FiveM",
   meta: [
@@ -35,5 +37,11 @@ useSeoMeta({
   ogDescription: "Feel the '70s vibes on FiveM",
   ogUrl: "https://www.peakville.it",
   ogSiteName: "Peakville",
+})
+
+mixpanel.init("31d0c9ccc269c90a61c4cdffeb6e4861", {
+  debug: true,
+  track_pageview: true,
+  persistence: "localStorage",
 })
 </script>
