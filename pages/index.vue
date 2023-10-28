@@ -1,7 +1,12 @@
 <template>
   <div class="flex h-screen w-screen flex-col items-center justify-center">
-    <img :src="logo" alt="Peakville" class="block w-52" :draggable="false" />
-    <div class="mt-9 text-2xl font-bold">
+    <img
+      :src="logo"
+      alt="Peakville"
+      class="block w-40 md:w-52"
+      :draggable="false"
+    />
+    <div class="mt-9 text-xl font-bold md:text-2xl">
       Gli anni 70 sono arrivati su FiveM
     </div>
     <div class="mt-3 flex w-fit items-center gap-4">
@@ -16,7 +21,7 @@
         <i class="bi text-2xl" :class="`bi-${social.key}`" />
       </a>
     </div>
-    <div class="mt-7 flex w-fit gap-4">
+    <div class="mt-7 flex w-fit flex-col gap-4 md:flex-row">
       <a
         v-for="(linkButton, index) in linkButtons"
         :key="`home-link-button-${index}`"

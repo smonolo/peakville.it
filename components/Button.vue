@@ -1,6 +1,6 @@
 <template>
   <button
-    class="block w-fit rounded-xl border-2 border-p-beige-100 px-8 py-3 font-heading text-p-beige-500 outline outline-2 transition-colors"
+    class="block w-fit rounded-xl border-2 border-p-beige-100 px-6 py-2 font-heading text-p-beige-500 outline outline-2 transition-colors md:px-8 md:py-3"
     :class="variants[variant ?? 'p-blue']"
   >
     <slot />
