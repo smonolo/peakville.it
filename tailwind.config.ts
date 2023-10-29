@@ -1,10 +1,6 @@
 import type { Config } from "tailwindcss"
 import defaultTheme from "tailwindcss/defaultTheme"
 
-const extendedThemeBackgroundImage = {
-  "home-background": "url('~/assets/img/home-background.jpg')",
-}
-
 export const extendedThemeColors = {
   "p-beige": {
     100: "#FFFDF0",
@@ -59,7 +55,6 @@ export default {
   ],
   theme: {
     extend: {
-      backgroundImage: extendedThemeBackgroundImage,
       colors: extendedThemeColors,
       fontFamily: extendedThemeFontFamily,
     },
