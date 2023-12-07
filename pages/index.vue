@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-home-background h-screen w-screen bg-[length:auto_120%] bg-center bg-no-repeat"
+    class="h-screen w-screen bg-home-background bg-[length:auto_120%] bg-center bg-no-repeat"
   >
     <div
       class="flex h-screen w-screen flex-col items-center justify-center bg-p-black-500/80"
@@ -11,9 +11,11 @@
         class="block w-40 md:w-52"
         :draggable="false"
       />
+
       <div class="mt-9 text-xl font-bold text-p-beige-100 md:text-2xl">
         Gli anni 70 sono arrivati su FiveM
       </div>
+
       <div class="mt-3 flex w-fit items-center gap-4">
         <a
           v-for="social in socials"
@@ -26,6 +28,7 @@
           <i class="bi text-2xl" :class="`bi-${social.key}`" />
         </a>
       </div>
+
       <div class="mt-7 flex w-fit flex-col gap-4 md:flex-row">
         <a
           v-for="(linkButton, index) in linkButtons"
@@ -42,7 +45,7 @@
 </template>
 
 <script setup lang="ts">
-import logo from "~/assets/img/logo.png"
+import logo from "~/assets/img/xmas_logo.webp"
 import type { ThemeColors } from "~/types/theme"
 
 type Social = {
